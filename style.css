@@ -1,0 +1,405 @@
+/* ROYAL BRAND PALETTE BASED ON YOUR LOGO */
+:root {
+    --primary-blue: #0A2540;     /* Deep Navy/Royal Blue */
+    --accent-gold: #C5A059;      /* Antique Gold Emblem Color */
+    --light-cream: #FDFBF7;      /* Subtle Textured Background */
+    --dark-text: #222222;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-cream);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* NAVBAR CONFIG MATRIX */
+header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* HERO PANEL FRAME LAYOUT */
+.hero {
+    background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.9)), url('cover_photo.jpg') center/cover no-repeat;
+    padding: 110px 5%;
+    text-align: center;
+    color: var(--white);
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.hero-logo-placeholder {
+    width: 140px;
+    height: 140px;
+    background: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+    border: 3px solid var(--accent-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    font-weight: 700;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-tagline {
+    font-size: 19px;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    color: #e5e7eb;
+}
+
+.cta-btn {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 16px 32px;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+}
+
+.cta-btn:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* VALUE TRACKER CELLS */
+.values {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.values h2 {
+    color: var(--primary-blue);
+    margin-bottom: 45px;
+    font-size: 34px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border-top: 5px solid var(--accent-gold);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* DYNAMIC CAROUSEL LAYER PANELS */
+.gallery-carousel-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+/* PREMIUM INTERACTIVE CAROUSEL FIXED ARCHITECTURE - DEEP NAVY CONTRAST LOCK */
+.gallery-carousel-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--primary-blue); /* Updated template selector mapping variable configuration */
+}
+
+/* TEXT COLOR ADAPTABILITY TUNING INJECTIONS FOR CLEAR READABILITY ON DARK BACKGROUND */
+.gallery-carousel-section h2 {
+    color: var(--accent-gold) !important;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.gallery-carousel-section .section-subtext {
+    font-size: 17px;
+    color: #e5e7eb !important; /* Forces soft readable white text instead of dark grey on navy background wrapper layers */
+    margin-bottom: 40px;
+}
+
+.section-subtext {
+    font-size: 17px;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    max-width: 900px;
+    height: 480px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border: 4px solid var(--accent-gold);
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 37, 64, 0.95));
+    color: var(--white);
+    padding: 40px 30px;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    color: var(--accent-gold);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(10, 37, 64, 0.7);
+    color: var(--white);
+    border: 1px solid var(--accent-gold);
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+}
+
+.carousel-control.prev { left: 20px; }
+.carousel-control.next { right: 20px; }
+
+/* MARKETING TIERS LAYOUTS */
+.packages-section {
+    background-color: #F4EFE6;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.packages-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 45px;
+    font-size: 34px;
+}
+
+.pkg-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 45px 25px;
+    border: 1px solid #e2e2e2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pkg-card.featured {
+    border: 3px solid var(--accent-gold);
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(10, 37, 64, 0.1);
+}
+
+.badge {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 18px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.pkg-card h3 {
+    font-size: 26px;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.price-sub {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.pkg-card ul {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.pkg-card ul li {
+    margin-bottom: 14px;
+    padding-left: 22px;
+    position: relative;
+    font-size: 15px;
+}
+
+.pkg-card ul li::before {
+    content: "✓";
+    color: var(--accent-gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.pkg-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 14px;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.pkg-btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+}
+
+/* PANEL TERMINAL FOOTER LAYOUT */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 5px solid var(--accent-gold);
+}
+
+.footer-brand {
+    color: var(--accent-gold);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    margin-bottom: 12px;
+    color: #d1d5db;
+    font-size: 15px;
+}
+
+/* SMARTPHONE BREAKPOINTS INTERFACE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 30px; }
+    .pkg-card.featured { transform: none; }
+    .grid-3 { gap: 25px; }
+    header { flex-direction: column; gap: 12px; }
+    nav a { margin: 0 8px; }
+    .carousel-container { height: 350px; }
+}
