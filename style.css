@@ -405,7 +405,7 @@ footer {
 }
 
 /* =========================================================
-   CONTACT HUB GRID INTERFACE SECTION STYLES
+   CONTACT HUB GRID INTERFACE SECTION STYLES - REVISED
    ========================================================= */
 .contact-hub-section {
     padding: 80px 5%;
@@ -430,12 +430,12 @@ footer {
     max-width: 950px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr; /* Shrinks the button block section column profile */
     gap: 40px;
     align-items: center;
 }
 
-/* LEFT CELL: EXECUTIVE PROFILE ID STYLING */
+/* LEFT SIDE EXECUTIVE ID CARD */
 .executive-identity-card {
     background-color: var(--light-cream);
     padding: 35px;
@@ -479,48 +479,51 @@ footer {
     font-style: italic;
 }
 
-/* RIGHT CELL: GRID BUTTONS STYLING */
+/* NARROW, UNIFORM SEMICIRCULAR BUTTONS STRINGS (PILL SHAPE) */
 .contact-channels-grid {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 320px; /* Forces a narrower width for elegant layout aesthetics */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .channel-btn {
     display: flex;
     align-items: center;
-    padding: 16px 25px;
+    justify-content: center; /* Centers alignment layout metrics */
+    padding: 12px 25px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(10, 37, 64, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    background-color: var(--accent-gold) !important; /* Standardized matching brand accent shade */
+    color: var(--primary-blue) !important; /* Deep navy text for flawless contrast balance */
+    border-radius: 50px !important; /* Turns smaller vertical side borders into perfect semicircles */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    box-shadow: 0 2px 8px rgba(197, 160, 89, 0.2);
 }
 
 .channel-icon {
-    font-size: 20px;
-    margin-right: 15px;
-    width: 25px;
-    text-align: center;
+    font-size: 16px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* DISTINCT BUTTONS STATES SHADES */
-.whatsapp-btn { background-color: #25D366; color: var(--white); border: none; }
-.whatsapp-btn:hover { background-color: #1ebd57; transform: translateX(5px); }
+/* HOVER FEEDBACK STATES CONTROLS */
+.channel-btn:hover {
+    background-color: var(--primary-blue) !important; /* Classic reverse contrast palette shift */
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(10, 37, 64, 0.25);
+}
 
-.call-btn { background-color: var(--primary-blue); color: var(--white); border: none; }
-.call-btn:hover { background-color: var(--accent-gold); color: var(--primary-blue); transform: translateX(5px); }
-
-.mail-btn { background-color: #EA4335; color: var(--white); border: none; }
-.mail-btn:hover { background-color: #d93025; transform: translateX(5px); }
-
-.instagram-btn { background-color: #E1306C; color: var(--white); border: none; }
-.instagram-btn:hover { background-color: #c1355e; transform: translateX(5px); }
-
-/* BREAKPOINTS RESPONSIVENESS OVERLAYS */
+/* SMARTPHONE BREAKPOINTS ADAPTATION OVERLAYS */
 @media (max-width: 768px) {
     .contact-hub-container { grid-template-columns: 1fr; gap: 30px; }
     .executive-identity-card { flex-direction: column; text-align: center; padding: 25px; }
-    .channel-btn:hover { transform: none; }
+    .contact-channels-grid { max-width: 100%; } /* Fits cleanly inside standard smartphone view ports */
 }
