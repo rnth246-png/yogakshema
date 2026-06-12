@@ -404,47 +404,123 @@ footer {
     .carousel-container { height: 350px; }
 }
 
-    <!-- NEW STANDARD CONTACT ARCHITECTURE SECTION -->
-    <section class="contact-hub-section" id="contact">
-        <h2>Connect With Our Executive Office</h2>
-        <p class="contact-hub-subtext">Reach out directly to schedule a curated consultation for your milestone celebration.</p>
-        
-        <div class="contact-hub-container">
-            <!-- Left Grid Pane: Executive ID Card -->
-            
-                <img src="revanth_chapala_photo.jpg" alt="Revanth Chapala - Founder & MD" class="executive-avatar">
-                <div class="executive-details">
-                    <h3>Revanth Chapala</h3>
-                    <p class="exec-title">Founder &amp; Managing Director</p>
-                    <p class="exec-brand-tag">Yoga Kshema Events Operations Head</p>
-                </div>
-            </div>
+/* =========================================================
+   CONTACT HUB GRID INTERFACE SECTION STYLES
+   ========================================================= */
+.contact-hub-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--white);
+    border-top: 1px solid rgba(10, 37, 64, 0.05);
+}
 
-            <!-- Right Grid Pane: Interactive Action Channel Buttons -->
-            <div class="contact-channels-grid">
-                <!-- WhatsApp Channel Button -->
-                <a href="https://wa.me." class="channel-btn whatsapp-btn" target="_blank">
-                    <span class="channel-icon">💬</span>
-                    <span class="channel-label">Connect on WhatsApp</span>
-                </a>
+.contact-hub-section h2 {
+    color: var(--primary-blue);
+    font-size: 34px;
+    margin-bottom: 10px;
+}
 
-                <!-- Voice Call Channel Button -->
-                <a href="tel:+919949141598" class="channel-btn call-btn">
-                    <span class="channel-icon">📞</span>
-                    <span class="channel-label">Direct Voice Call</span>
-                </a>
+.contact-hub-subtext {
+    font-size: 17px;
+    color: #555555;
+    margin-bottom: 50px;
+}
 
-                <!-- Corporate Mail Channel Button -->
-                <a href="mailto:info@yogakshemaevents.com" class="channel-btn mail-btn">
-                    <span class="channel-icon">✉️</span>
-                    <span class="channel-label">Official Email Box</span>
-                </a>
+.contact-hub-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
 
-                <!-- Instagram Channel Button -->
-                <a href="https://instagram.com" class="channel-btn instagram-btn" target="_blank">
-                    <span class="channel-icon">📸</span>
-                    <span class="channel-label">Follow Instagram Grid</span>
-                </a>
-            </div>
-        </div>
-    </section>
+/* LEFT CELL: EXECUTIVE PROFILE ID STYLING */
+.executive-identity-card {
+    background-color: var(--light-cream);
+    padding: 35px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-gold);
+    box-shadow: 0 4px 20px rgba(10, 37, 64, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+}
+
+.executive-avatar {
+    width: 90px;
+    height: 110px;
+    border-radius: 6px;
+    border: 2px solid var(--accent-gold);
+    object-fit: cover;
+    object-position: top center;
+}
+
+.executive-details h3 {
+    color: var(--primary-blue);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.exec-title {
+    color: var(--accent-gold);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.exec-brand-tag {
+    color: #666666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* RIGHT CELL: GRID BUTTONS STYLING */
+.contact-channels-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.channel-btn {
+    display: flex;
+    align-items: center;
+    padding: 16px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(10, 37, 64, 0.1);
+}
+
+.channel-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+/* DISTINCT BUTTONS STATES SHADES */
+.whatsapp-btn { background-color: #25D366; color: var(--white); border: none; }
+.whatsapp-btn:hover { background-color: #1ebd57; transform: translateX(5px); }
+
+.call-btn { background-color: var(--primary-blue); color: var(--white); border: none; }
+.call-btn:hover { background-color: var(--accent-gold); color: var(--primary-blue); transform: translateX(5px); }
+
+.mail-btn { background-color: #EA4335; color: var(--white); border: none; }
+.mail-btn:hover { background-color: #d93025; transform: translateX(5px); }
+
+.instagram-btn { background-color: #E1306C; color: var(--white); border: none; }
+.instagram-btn:hover { background-color: #c1355e; transform: translateX(5px); }
+
+/* BREAKPOINTS RESPONSIVENESS OVERLAYS */
+@media (max-width: 768px) {
+    .contact-hub-container { grid-template-columns: 1fr; gap: 30px; }
+    .executive-identity-card { flex-direction: column; text-align: center; padding: 25px; }
+    .channel-btn:hover { transform: none; }
+}
