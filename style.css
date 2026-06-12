@@ -476,6 +476,11 @@ footer {
     box-shadow: 0 6px 18px rgba(10, 37, 64, 0.25) !important;
 }
 
+/* Ensures raw inline icon vectors invert to white cleanly on hover execution */
+.channel-btn:hover .channel-icon svg {
+    fill: #ffffff !important;
+}
+
 /* MOBILE VIEWPORTS PERFORMANCE STYLES */
 @media (max-width: 480px) {
     .contact-channels-grid {
